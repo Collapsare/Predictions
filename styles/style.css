@@ -31,6 +31,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    opacity: 0;
+    
 }
 
 .number {
@@ -38,6 +41,10 @@ body {
     font-size: 1.8rem;
 }
 
-
+.appear {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
 
 
