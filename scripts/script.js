@@ -1,11 +1,14 @@
+import { predictions } from "./predictions.js"
+
 const btnStart = document.getElementById('btn-start')
 const btnEnd = document.getElementById('btn-end')
 const audio = document.getElementById('audio')
 const number = document.getElementById('number')
 const numberWrapper = document.getElementById('number-wrapper')
 const predictionWrapper = document.getElementById('prediction-wrapper')
+const predictionText = document.getElementById('prediction-text')
 let flag = true
-const predictions = [1, 2, 3, 4, 5]
+
 
 
 btnStart.addEventListener('click', start)
@@ -16,18 +19,21 @@ function getPredictionNumber(min, max) {
 }
 
 function printNum() {
+    
     setTimeout(function go() {
-        number.innerText = predictions[getPredictionNumber(0, 5)]
+        number.innerText = getPredictionNumber(0, 5)
         if (flag) {
             setTimeout(go, 100)
         }
     }, 100)
+    
 }
 
 function start() {
     audio.play()
     numberWrapper.classList.add('appear')
-    printNum()   
+    printNum()
+    
 }
 
 function end() {
@@ -35,6 +41,7 @@ function end() {
     flag = false
     btnStart.classList.add('disappear')
     btnEnd.classList.add('disappear')
+    predictionText.innerText = 
     setTimeout(() => predictionWrapper.classList.add('appear'), 1000)
     
 }
