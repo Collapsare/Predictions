@@ -3,6 +3,7 @@ const btnEnd = document.getElementById('btn-end')
 const audio = document.getElementById('audio')
 const number = document.getElementById('number')
 const numberWrapper = document.getElementById('number-wrapper')
+const predictionWrapper = document.getElementById('prediction-wrapper')
 let flag = true
 const predictions = [1, 2, 3, 4, 5]
 
@@ -26,9 +27,7 @@ function printNum() {
 function start() {
     audio.play()
     numberWrapper.classList.add('appear')
-    printNum()
-    
-    
+    printNum()   
 }
 
 function end() {
@@ -36,5 +35,7 @@ function end() {
     flag = false
     btnStart.classList.add('disappear')
     btnEnd.classList.add('disappear')
+    setTimeout(() => predictionWrapper.classList.add('appear'), 1000)
+    
 }
 
