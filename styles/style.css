@@ -8,6 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .flex-wrapper {
@@ -17,6 +18,24 @@ body {
     height: 100vh;
     gap: 20px;
 
+}
+
+.nums {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: none;
+    margin-top: -300px;
+    border: 4px solid #f1c40f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    color: white;
+    font-size: 1.8rem;
 }
 
 

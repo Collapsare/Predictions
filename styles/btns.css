@@ -8,6 +8,7 @@
     color: #f1c40f;
     font-family: 'Montserrat', sans-serif;
     transition: .4s;
+    margin-left: 85px;
 }
 
 .btn:after {
