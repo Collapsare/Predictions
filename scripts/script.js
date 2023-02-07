@@ -7,6 +7,7 @@ const number = document.getElementById('number')
 const numberWrapper = document.getElementById('number-wrapper')
 const predictionWrapper = document.getElementById('prediction-wrapper')
 const predictionText = document.getElementById('prediction-text')
+const img = document.getElementById('img')
 let flag = true
 
 
@@ -21,7 +22,8 @@ function getPredictionNumber(min, max) {
 function printNum() {
     
     setTimeout(function go() {
-        number.innerText = getPredictionNumber(1, 5)
+        number.innerText = getPredictionNumber(1, 6)
+        predictionText.innerText = predictions[number.innerText]
         if (flag) {
             setTimeout(go, 100)
         }
@@ -41,8 +43,7 @@ function end() {
     flag = false
     btnStart.classList.add('disappear')
     btnEnd.classList.add('disappear')
-    predictionText.innerText = predictions[number.innerText]
+    img.classList.add('appear')
     setTimeout(() => predictionWrapper.classList.add('appear'), 1000)
-    
 }
 

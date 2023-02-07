@@ -61,6 +61,15 @@ body {
     text-align: center;
 }
 
+.img {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 115px;
+    left: 35px;
+    opacity: 0;
+}
+
 .appear {
     opacity: 1;
     transition-property: opacity;
