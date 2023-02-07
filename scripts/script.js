@@ -21,7 +21,7 @@ function getPredictionNumber(min, max) {
 function printNum() {
     
     setTimeout(function go() {
-        number.innerText = getPredictionNumber(0, 5)
+        number.innerText = getPredictionNumber(1, 5)
         if (flag) {
             setTimeout(go, 100)
         }
@@ -41,7 +41,7 @@ function end() {
     flag = false
     btnStart.classList.add('disappear')
     btnEnd.classList.add('disappear')
-    predictionText.innerText = 
+    predictionText.innerText = predictions[number.innerText]
     setTimeout(() => predictionWrapper.classList.add('appear'), 1000)
     
 }
